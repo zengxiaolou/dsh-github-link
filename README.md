@@ -17,6 +17,13 @@ DSH 插件：把**对话区**回复里的仓库 URL（**GitHub / GitLab / Gitee*
 它**不改** GenUI（`@changfenhuang/dsh-genui`）本体：截图里那套结论块 / 指标卡 / 表格是
 GenUI 渲染的，本插件只是给它的链接和裸 URL 补上 hover 与点击行为，因此 GenUI 升级不会把这层改动冲掉。
 
+## 效果
+
+![链接卡片](https://raw.githubusercontent.com/zengxiaolou/dsh-github-link/main/docs/images/effect.png)
+
+> 示意图（按主题令牌渲染）：回复里的 GitHub / GitLab / Gitee 链接变成可悬停的信息卡片——简介、星标、语言、issue/PR 状态，底部一行 `git clone` 可一键复制；点卡片直接在右侧栏浏览器打开。
+
+
 ## 作用范围
 
 **只在对话正文里生效**（`[data-conversation-content]`，即 Conversation 外壳的对话区：
