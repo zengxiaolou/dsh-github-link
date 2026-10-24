@@ -1,5 +1,8 @@
 # dsh-github-link
 
+![dsh-github-link](https://raw.githubusercontent.com/zengxiaolou/dsh-github-link/main/docs/images/promo.png)
+
+
 DSH 插件：把**对话区**回复里的仓库 URL（**GitHub / GitLab / Gitee**）变成「可悬停的信息卡片」，
 并让点击直接在 DSH 右侧栏自带的浏览器标签页里打开。
 
