@@ -1,6 +1,6 @@
 {
   "name": "dsh-github-link",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "type": "module",
   "description": "Hover cards for GitHub / GitLab / Gitee URLs plus click-to-open in the DSH sidebar browser, scoped to the conversation transcript (GenUI blocks included).",
   "exports": {
