@@ -40,5 +40,6 @@
     "dsh",
     "dsh-plugin",
     "deepseek-harness"
-  ]
+  ],
+  "license": "MIT"
 }
