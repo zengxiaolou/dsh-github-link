@@ -2,6 +2,14 @@
 
 ![dsh-github-link](https://raw.githubusercontent.com/zengxiaolou/dsh-github-link/main/docs/images/promo.png)
 
+<p>
+<a href="https://www.npmjs.com/package/dsh-github-link"><img alt="npm" src="https://img.shields.io/npm/v/dsh-github-link?color=2f81f7&label=npm"></a>
+<a href="https://www.npmjs.com/package/dsh-github-link"><img alt="downloads" src="https://img.shields.io/npm/dw/dsh-github-link?color=3fb950"></a>
+<a href="https://github.com/zengxiaolou/dsh-github-link/blob/main/LICENSE"><img alt="license" src="https://img.shields.io/npm/l/dsh-github-link?color=bf8700"></a>
+<img alt="dsh plugin" src="https://img.shields.io/badge/DSH-plugin-7aa2ff">
+<a href="https://github.com/zengxiaolou/dsh-github-link/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/zengxiaolou/dsh-github-link?color=8250df"></a>
+</p>
+
 
 DSH 插件：把**对话区**回复里的仓库 URL（**GitHub / GitLab / Gitee**）变成「可悬停的信息卡片」，
 并让点击直接在 DSH 右侧栏自带的浏览器标签页里打开。
