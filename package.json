@@ -1,0 +1,31 @@
+{
+  "name": "dsh-github-link",
+  "version": "0.4.1",
+  "private": true,
+  "type": "module",
+  "description": "Hover cards for GitHub / GitLab / Gitee URLs plus click-to-open in the DSH sidebar browser, scoped to the conversation transcript (GenUI blocks included).",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    }
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ]
+}

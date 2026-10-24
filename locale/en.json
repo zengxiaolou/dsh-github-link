@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Repo Link Cards (GitHub / GitLab / Gitee)",
+    "description": "Turns GitHub, GitLab and Gitee URLs in the conversation transcript into hover cards with the repository description, stars, language, issue/PR title and state, plus a copy-clone button; a click opens the page in the right-sidebar browser."
+  }
+}

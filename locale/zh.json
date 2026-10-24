@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "GitHub / GitLab / Gitee 链接卡片",
+    "description": "把对话区回复里的 GitHub、GitLab、Gitee 链接变成可悬停的仓库信息卡片：简介、星标、语言、issue/PR 状态与标题，可一键复制 clone；点击直接在右侧栏浏览器里打开。"
+  }
+}

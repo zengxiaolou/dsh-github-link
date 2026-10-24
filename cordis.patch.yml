@@ -1,0 +1,9 @@
+# dsh-github-link — GitHub 链接富化（hover 卡片 + 侧边栏浏览器打开）
+#
+# host 半：/github-link/card 路由，带缓存的 GitHub 仓库元数据（优先用 gh 的 token）。
+# client 半：在任意回复（含 GenUI 块）里识别 github.com URL，hover 出卡片，点击走宿主
+#            sidebarRight.openTab('browser') —— 也就是 DSH 右侧栏自带的浏览器标签页。
+- insert:
+    - id: github-link
+      name: 'dsh-github-link'
+      config: {}
