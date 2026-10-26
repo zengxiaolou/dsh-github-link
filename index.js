@@ -26,6 +26,29 @@ export const name = 'dsh-github-link'
 /** Route mounting requires the browser HTTP carrier. */
 export const inject = ['webServer']
 
+/**
+ * 请求准入：官方 web-server 契约里 carrier 不做鉴权与 Origin 策略，每个路由要在 handler
+ * 开头自己调 connection.requestRejection(req)。宿主没有 connection 服务时放行，保持旧版本兼容。
+ * @returns {boolean} true 表示已经拒绝并写完响应，调用方必须立即返回
+ */
+function deniedByConnection(ctx, req, res) {
+  let rejection
+  try {
+    const connection = typeof ctx?.get === 'function' ? ctx.get('connection') : ctx?.connection
+    rejection =
+      connection && typeof connection.requestRejection === 'function'
+        ? connection.requestRejection(req)
+        : undefined
+  } catch {
+    rejection = undefined
+  }
+  if (!rejection) return false
+  res.statusCode = rejection
+  res.setHeader('content-type', 'application/json')
+  res.end(JSON.stringify({ ok: false, error: rejection === 401 ? 'unauthorized' : 'forbidden' }))
+  return true
+}
+
 const ROUTE_PREFIX = '/github-link'
 const PLUGIN_VERSION = '0.4.0'
 const CACHE_TTL_MS = 10 * 60 * 1000
@@ -633,7 +656,12 @@ async function handler(req, res) {
  */
 export function apply(ctx) {
   ctx.effect(
-    () => ctx.webServer.register({ kind: 'prefix', path: ROUTE_PREFIX, handler }),
+    () =>
+      ctx.webServer.register({
+        kind: 'prefix',
+        path: ROUTE_PREFIX,
+        handler: (req, res) => (deniedByConnection(ctx, req, res) ? undefined : handler(req, res)),
+      }),
     'dsh-github-link: /github-link/card route',
   )
 }
